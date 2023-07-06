@@ -55,7 +55,6 @@ export default defineConfig({
           },
         ],
       },
-      previewStyles: ['/src/styles/blog.css'],
     }),
   ],
 });
