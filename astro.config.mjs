@@ -1,9 +1,15 @@
 import { defineConfig } from 'astro/config';
 import NetlifyCMS from 'astro-netlify-cms';
+import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [
+    tailwind({
+      config:{
+        path: './custom-config.cjs'
+      }
+    }),
     NetlifyCMS({
       config: {
         // Use Netlify’s “Git Gateway” authentication and target our default branch
