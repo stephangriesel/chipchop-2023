@@ -1,0 +1,51 @@
+---
+import Head from '../components/Head.astro';
+
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { SITE } from '../config';
+
+let { title } = SITE;
+let description = 'The perfect starter for your perfect blog.';
+let permalink = 'https://example.com/';
+
+let allPosts = await Astro.glob('./posts/*.md');
+allPosts = allPosts.sort(
+  (a, b) =>
+    new Date(b.frontmatter.publishDate).valueOf() -
+    new Date(a.frontmatter.publishDate).valueOf()
+);
+---
+
+<html lang="en">
+  <head>
+    <Head {title} {description} {permalink} />
+  </head>
+
+  <body>
+    <div class="ml-[auto] mr-[auto] w-full max-w-[65em] pl-[2rem] pr-[2rem]">
+      <Nav />
+      <script
+        src="https://product-gallery.cloudinary.com/all.js"
+        type="text/javascript"
+      ></script>
+
+      <div id="my-gallery" style="max-width:80%;margin:auto"></div>
+
+      <script type="text/javascript">
+        const myGallery = cloudinary.galleryWidget({
+          container: '#my-gallery',
+          cloudName: 'demo',
+          mediaAssets: [
+            { tag: 'electric_car_product_gallery_demo' }, // by default mediaType: "image"
+            { tag: 'electric_car_product_gallery_demo', mediaType: 'video' },
+            { tag: 'electric_car_360_product_gallery_demo', mediaType: 'spin' },
+          ],
+        });
+
+        myGallery.render();
+      </script>
+      <Footer />
+    </div>
+  </body>
+</html>
