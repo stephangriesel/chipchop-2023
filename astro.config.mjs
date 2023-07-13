@@ -46,9 +46,40 @@ export default defineConfig({
               {
                 name: 'layout',
                 widget: 'select',
-                default: '../../layouts/BlogPost.astro',
+                default: '../../layouts/Post.astro',
                 options: [
-                  { label: 'Blog Post', value: '../../layouts/BlogPost.astro' },
+                  { label: 'Blog Post', value: '../../layouts/Post.astro' },
+                ],
+              },
+            ],
+          },
+          {
+            name: 'galleries',
+            label: 'Gallery Posts',
+            label_singular: 'Gallery Post',
+            folder: 'src/pages/posts',
+            create: true,
+            delete: true,
+            fields: [
+              { name: 'title', widget: 'string', label: 'Post Title' },
+              {
+                name: 'publishDate',
+                widget: 'datetime',
+                format: 'DD MMM YYYY',
+                date_format: 'DD MMM YYYY',
+                time_format: false,
+                label: 'Publish Date',
+              },
+              { name: 'author', widget: 'string', label: 'Author Name', required: false },
+              { name: 'authorURL', widget: 'string', label: 'Author URL', required: false },
+              { name: 'description', widget: 'string', label: 'Description', required: false },
+              { name: 'body', widget: 'markdown', label: 'Post Body' },
+              {
+                name: 'layout',
+                widget: 'select',
+                default: '../../layouts/Post.astro',
+                options: [
+                  { label: 'Gallery Post', value: '../../layouts/Post.astro' },
                 ],
               },
             ],
