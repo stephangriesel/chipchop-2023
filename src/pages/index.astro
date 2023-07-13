@@ -1,7 +1,7 @@
 ---
 // Component Imports
 import Head from '../components/Head.astro';
-import BlogPostPreview from '../components/BlogPostPreview.astro';
+import PostPreview from '../components/PostPreview.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import { SITE } from '../config';
@@ -38,7 +38,7 @@ allPosts = allPosts.sort(
 					<p>{description}</p>
 				</section>
 				<section aria-label="Blog post list">
-					{allPosts.map((p) => <BlogPostPreview post={p} />)}
+					{allPosts.map((p) => <PostPreview post={p} />)}
 				</section>
 			</main>
 			<Footer />
