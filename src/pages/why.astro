@@ -1,6 +1,6 @@
 ---
 import Head from '../components/Head.astro';
-
+import PostPreview from '../components/PostPreview.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import { SITE } from '../config';
@@ -25,7 +25,13 @@ allPosts = allPosts.sort(
   <body>
     <div class="ml-[auto] mr-[auto] w-full max-w-[65em] pl-[2rem] pr-[2rem]">
       <Nav />
-      <div>Why</div>
+      <section>
+        <h1>{title}</h1>
+        <p>{description}</p>
+      </section>
+      <section aria-label="Blog post list">
+        {allPosts.map((p) => <PostPreview post={p} />)}
+      </section>
       <Footer />
     </div>
   </body>
