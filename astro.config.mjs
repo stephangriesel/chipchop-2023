@@ -18,41 +18,10 @@ export default defineConfig({
           branch: 'latest',
         },
         // Configure where our media assets are stored & served from
-        media_folder: 'public/assets/blog',
-        public_folder: '/assets/blog',
+        media_folder: 'public/upload',
+        public_folder: '/upload',
         // Configure the content collections
         collections: [
-          {
-            name: 'posts',
-            label: 'Blog Posts',
-            label_singular: 'Blog Post',
-            folder: 'src/pages/posts',
-            create: true,
-            delete: true,
-            fields: [
-              { name: 'title', widget: 'string', label: 'Post Title' },
-              {
-                name: 'publishDate',
-                widget: 'datetime',
-                format: 'DD MMM YYYY',
-                date_format: 'DD MMM YYYY',
-                time_format: false,
-                label: 'Publish Date',
-              },
-              { name: 'author', widget: 'string', label: 'Author Name', required: false },
-              { name: 'authorURL', widget: 'string', label: 'Author URL', required: false },
-              { name: 'description', widget: 'string', label: 'Description', required: false },
-              { name: 'body', widget: 'markdown', label: 'Post Body' },
-              {
-                name: 'layout',
-                widget: 'select',
-                default: '../../layouts/Post.astro',
-                options: [
-                  { label: 'Blog Post', value: '../../layouts/Post.astro' },
-                ],
-              },
-            ],
-          },
           {
             name: 'galleries',
             label: 'Gallery Posts',
@@ -62,24 +31,20 @@ export default defineConfig({
             delete: true,
             fields: [
               { name: 'title', widget: 'string', label: 'Post Title' },
-              {
-                name: 'publishDate',
-                widget: 'datetime',
-                format: 'DD MMM YYYY',
-                date_format: 'DD MMM YYYY',
-                time_format: false,
-                label: 'Publish Date',
+              { 
+                name: 'thumbnail', 
+                widget: 'image', 
+                choose_url: true, 
+                default: '/upload/logogray.svg',
               },
-              { name: 'author', widget: 'string', label: 'Author Name', required: false },
-              { name: 'authorURL', widget: 'string', label: 'Author URL', required: false },
               { name: 'description', widget: 'string', label: 'Description', required: false },
               { name: 'body', widget: 'markdown', label: 'Post Body' },
               {
                 name: 'layout',
                 widget: 'select',
-                default: '../../layouts/Post.astro',
+                default: '../../layouts/GalleryPost.astro',
                 options: [
-                  { label: 'Gallery Post', value: '../../layouts/Post.astro' },
+                  { label: 'Gallery Post', value: '../../layouts/GalleryPost.astro' },
                 ],
               },
             ],
