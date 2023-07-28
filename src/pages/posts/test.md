@@ -1,6 +1,8 @@
 ---
 title: Test
 publishDate: 13 Jul 2023
-layout: ../../layouts/Post.astro
+thumbnail: /upload/info1.jpg
+description: Test
+layout: ../../layouts/GalleryPost.astro
 ---
 Test
