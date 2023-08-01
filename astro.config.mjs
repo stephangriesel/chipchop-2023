@@ -38,6 +38,7 @@ export default defineConfig({
                 default: '/upload/logogray.svg',
               },
               { name: 'description', widget: 'string', label: 'Description', required: false },
+              { name: 'tag', widget: 'string', label: 'Tag', required: true },
               { name: 'body', widget: 'markdown', label: 'Post Body' },
               {
                 name: 'layout',
