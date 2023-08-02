@@ -4,17 +4,7 @@ import Header from '../components/Header.astro';
 import Post from '../components/GalleryPost.astro';
 
 const { content } = Astro.props;
-const {
-  title,
-  description,
-  publishDate,
-  author,
-  authorURL,
-  heroImage,
-  permalink,
-  alt,
-  tag,
-} = content;
+const { title, description, permalink, alt, tag } = content;
 ---
 
 <html lang={content.lang || 'en'}>
@@ -25,7 +15,7 @@ const {
   <body>
     <!-- <Header /> -->
     <div class="wrapper">
-      <Post {title} {author} {authorURL} {heroImage} {publishDate} {alt} {tag}>
+      <Post {title} {description} {alt} {tag}>
         <slot />
       </Post>
     </div>
