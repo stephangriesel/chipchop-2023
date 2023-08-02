@@ -1,8 +1,8 @@
 ---
-title: Tag test
+title: Tag title
 thumbnail: /upload/logogray.svg
-description: tag test
-tag: test1234555
+description: tag description
+tag: test
 layout: ../../layouts/GalleryPost.astro
 ---
-tag test
+tag body
