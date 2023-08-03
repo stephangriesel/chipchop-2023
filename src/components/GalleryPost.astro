@@ -16,7 +16,8 @@ const { title, description, tag } = Astro.props as Props;
     <Nav />
   </div>
   <div class="text-center">
-    Title:{title} - Tag:{tag} - Description:{description}
+    <h1>{title}</h1>
+    <p class="text-center">{description}</p>
   </div>
   <div class="ml-[auto] mr-[auto] w-full max-w-[65em] pl-[2rem] pr-[2rem]">
     <script
@@ -26,15 +27,15 @@ const { title, description, tag } = Astro.props as Props;
     ></script>
     <div id="my-gallery" style="max-width:80%;margin:auto"></div>
 
-    <script type="text/javascript">
+    <script define:vars={{ tag }} type="text/javascript">
       const myGallery = cloudinary.galleryWidget({
         container: '#my-gallery',
         cloudName: 'chipchop',
-        mediaAssets: [{ tag: 'test', mediaType: 'image' }],
+        mediaAssets: [{ tag: tag, mediaType: 'image' }],
       });
 
       myGallery.render();
     </script>
-    <Footer />
   </div>
+  <Footer />
 </div>
