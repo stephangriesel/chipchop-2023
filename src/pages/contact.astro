@@ -13,37 +13,101 @@ let permalink = 'https://example.com/';
 <html lang="en">
   <head>
     <Head {title} {description} {permalink} />
-  </head>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" type="text/javascript" -->
+  </head>>
 
   <body>
     <div class="ml-[auto] mr-[auto] w-full max-w-[65em] pl-[2rem] pr-[2rem]">
       <Nav />
       <div class="flex flex-col">
         <form
-          class="flex flex-col w-full justify-center items-center"
-          netlify
-          netlify-honeypot
-          name="feedback"
+          action="https://formie.io/form/92f0a5e8-6eac-4adf-bb83-bacd4df0fd24"
           method="POST"
-          action="/success"
+          enctype="multipart/form-data"
+          class="flex flex-col"
+          id="form"
         >
-          <p class="hidden">
-            <label>
-              Don’t fill this out if you’re human: <input name="bot-field" />
-            </label>
+          <label class="mt-5">Email:</label>
+          <input name="email" type="email" required />
+          <label class="mt-5">Name:</label>
+          <input name="name" type="text" required />
+          <label class="mt-5">Telephone:</label>
+          <input name="telephone" type="number" />
+          <label class="mt-5">Type of furniture:</label>
+          <select name="type-of-furniture" required>
+            <option selected="true" disabled="disabled">Choose option</option>
+            <option>Wardrobe</option>
+            <option>Kitchen</option>
+            <option>Cupboard</option>
+            <option>Table</option>
+            <option>Cabinet</option>
+            <option>Other</option>
+          </select>
+          <label class="mt-5">If other selected please specify below:</label>
+          <input name="other" type="text" required />
+          <label class="mt-5">Approximate Size (H x W x D):</label>
+          <input name="approximate-size" type="text" required />
+          <label class="mt-5">Materials:</label>
+          <select name="materials" required>
+            <option selected="true" disabled="disabled">Choose Option</option>
+            <option>In consultation</option>
+            <option>Multiplex</option>
+            <option>MDF</option>
+            <option>Real wood veneer</option>
+            <option>HPL</option>
+          </select>
+          <label class="mt-5">Finish:</label>
+          <select name="finish" required>
+            <option selected="true" disabled="disabled">Choose Option</option>
+            <option>In consultation</option>
+            <option>Painted</option>
+            <option>Varnished</option>
+            <option>Oiled/Waxed</option>
+          </select>
+          <label class="mt-5">Special Features:</label>
+          <select name="special-features" required>
+            <option selected="true" disabled="disabled">Choose Option</option>
+            <option>Drawers</option>
+            <option>Rails</option>
+            <option>Other</option>
+          </select>
+          <label class="mt-5">Additional information:</label>
+          <p class="text-sm">
+            Please specify as much information as possible. Number of drawers,
+            rails or any additional information required.
           </p>
-          <input type="hidden" name="form-name" value="feedback" />
-          <label for="name">Name</label>
-          <input id="name" type="text" name="name" />
-          <label for="email">Email</label>
-          <input id="email" type="email" name="email" required />
-          <label for="feedback">What is your feedback?</label>
-          <textarea id="feedback" wrap="soft" name="feedback" required
-          ></textarea>
-          <button type="submit">Submit</button>
+          <textarea name="additional-information-and-other" required></textarea>
+          <label class="mt-5">Execution date:</label>
+          <select name="execution-date" required>
+            <option selected="true" disabled="disabled">Choose Option</option>
+            <option>Urgently</option>
+            <option>Within a couple of months</option>
+            <option>In consultation</option>
+          </select>
+          <label class="mt-5">Inspiration files:</label>
+          <p class="text-sm">
+            Please compress/zip your photos or files & upload
+          </p>
+          <input name="inspiration-pictures-and-files" type="file" required />
+          <label class="mt-5">Brief outline of the project:</label>
+          <textarea name="brief-outline-of-project" required></textarea>
+          <input
+            name="_redirect"
+            type="hidden"
+            value="https://www.google.com"
+          />
+          <button
+            class="mt-2 w-[8em] inline-flex justify-center content-center items-center px-3 py-2 text-sm font-medium text-center text-white bg-slate-700 rounded-lg hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            data-action="submit">Submit</button
+          >
         </form>
       </div>
       <Footer />
     </div>
+    <!-- <script is:inline>
+      function onSubmit(token) {
+        document.getElementById('form').submit();
+      }
+    </script> -->
   </body>
 </html>
