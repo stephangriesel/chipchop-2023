@@ -5,6 +5,9 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				'pathway-gothic-one':['"Pathway Gothic One"'],
+			},
       width: {
         '128': '32rem',
       }
