@@ -38,6 +38,11 @@ let permalink = 'https://example.com/';
           class="flex flex-col"
           id="form"
         >
+          <input
+            name="_redirect"
+            type="hidden"
+            value="https://grand-banoffee-8dcc7e.netlify.app/success/"
+          />
           <div class="pt-2">
             <label
               for="email"
@@ -103,12 +108,12 @@ let permalink = 'https://example.com/';
           <div>
             <div class="pt-2">
               <label
-                for="subject"
+                for="furniture-other"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >If other selected please specify</label
               >
               <input
-                type="number"
+                type="text"
                 id="other"
                 class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                 placeholder=""
@@ -170,22 +175,97 @@ let permalink = 'https://example.com/';
             </select>
           </div>
           <div class="pt-2">
-            <label
-              for="special-features"
+            <h3
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >Special Features</label
             >
-            <select
-              name="special-features"
-              class="p-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              required
+              Special Features
+            </h3>
+            <ul
+              class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white"
             >
-              <option selected="true" disabled="disabled">Choose Option</option>
-              <option>In consultation</option>
-              <option>Drawers</option>
-              <option>Rails</option>
-              <option>Other</option>
-            </select>
+              <li
+                class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+              >
+                <div class="flex items-center pl-3">
+                  <input
+                    id="inconsultation-checkbox-list"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="inconsultation-checkbox-list"
+                    class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >In Consultation</label
+                  >
+                </div>
+              </li>
+              <li
+                class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+              >
+                <div class="flex items-center pl-3">
+                  <input
+                    id="drawers-checkbox-list"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="drawers-checkbox-list"
+                    class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >Drawers</label
+                  >
+                </div>
+              </li>
+              <li
+                class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+              >
+                <div class="flex items-center pl-3">
+                  <input
+                    id="rails-checkbox-list"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="rails-checkbox-list"
+                    class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >Rails</label
+                  >
+                </div>
+              </li>
+              <li class="w-full dark:border-gray-600">
+                <div class="flex items-center pl-3">
+                  <input
+                    id="other-checkbox-list"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="other-checkbox-list"
+                    class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >Other</label
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="pt-2">
+              <label
+                for="specialfeatures-other"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >If other selected please specify</label
+              >
+              <input
+                type="text"
+                id="specialfeatures-other"
+                class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                placeholder=""
+                required
+              />
+            </div>
           </div>
           <div class="pt-2">
             <label
@@ -257,11 +337,6 @@ let permalink = 'https://example.com/';
           </div>
 
           <div class="pt-2">
-            <input
-              name="_redirect"
-              type="hidden"
-              value="https://grand-banoffee-8dcc7e.netlify.app/success/"
-            />
             <button
               class="mt-2 w-[8em] inline-flex justify-center content-center items-center px-3 py-2 text-sm font-medium text-center text-white bg-slate-700 rounded-lg hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               onclick="
