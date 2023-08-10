@@ -59,7 +59,7 @@ let permalink = 'https://example.com/';
           </div>
           <div class="pt-2">
             <label
-              for="subject"
+              for="name"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >Name</label
             >
@@ -73,7 +73,7 @@ let permalink = 'https://example.com/';
           </div>
           <div class="pt-2">
             <label
-              for="subject"
+              for="telephone"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >Telephone</label
             >
@@ -88,11 +88,12 @@ let permalink = 'https://example.com/';
           <div class="p-5"></div>
           <div class="pt-2">
             <label
-              for="countries"
+              for="type-of-furniture"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >Type of furniture</label
             >
             <select
+              name="type-of-furniture"
               id="furniture"
               class="p-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             >
@@ -108,13 +109,13 @@ let permalink = 'https://example.com/';
           <div>
             <div class="pt-2">
               <label
-                for="furniture-other"
+                for="other"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >If other selected please specify</label
               >
               <input
                 type="text"
-                id="other"
+                name="other-type-of-furniture"
                 class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                 placeholder=""
                 required
@@ -124,13 +125,13 @@ let permalink = 'https://example.com/';
           <div>
             <div class="pt-2">
               <label
-                for="subject"
+                for="approximate-size"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >Approximate Size</label
               >
               <input
                 type="text"
-                id="other"
+                name="approximate-size"
                 class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                 placeholder="H x W x D"
                 required
@@ -188,13 +189,13 @@ let permalink = 'https://example.com/';
               >
                 <div class="flex items-center pl-3">
                   <input
-                    id="inconsultation-checkbox-list"
+                    name="in-consultation"
                     type="checkbox"
                     value=""
                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                   />
                   <label
-                    for="inconsultation-checkbox-list"
+                    for="in-consultation"
                     class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                     >In Consultation</label
                   >
@@ -205,13 +206,13 @@ let permalink = 'https://example.com/';
               >
                 <div class="flex items-center pl-3">
                   <input
-                    id="drawers-checkbox-list"
+                    name="drawers"
                     type="checkbox"
                     value=""
                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                   />
                   <label
-                    for="drawers-checkbox-list"
+                    for="drawers"
                     class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                     >Drawers</label
                   >
@@ -222,30 +223,15 @@ let permalink = 'https://example.com/';
               >
                 <div class="flex items-center pl-3">
                   <input
-                    id="rails-checkbox-list"
+                    name="rails"
                     type="checkbox"
                     value=""
                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                   />
                   <label
-                    for="rails-checkbox-list"
+                    for="rails"
                     class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                     >Rails</label
-                  >
-                </div>
-              </li>
-              <li class="w-full dark:border-gray-600">
-                <div class="flex items-center pl-3">
-                  <input
-                    id="other-checkbox-list"
-                    type="checkbox"
-                    value=""
-                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                  />
-                  <label
-                    for="other-checkbox-list"
-                    class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                    >Other</label
                   >
                 </div>
               </li>
@@ -254,19 +240,20 @@ let permalink = 'https://example.com/';
           <div>
             <div class="pt-2">
               <label
-                for="specialfeatures-other"
+                for="additional-information-and-other"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                >If other selected please specify</label
+                >If other, please specify</label
               >
               <input
                 type="text"
-                id="specialfeatures-other"
+                name="additional-information-and-other"
                 class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                 placeholder=""
                 required
               />
             </div>
           </div>
+          <div class="p-5"></div>
           <div class="pt-2">
             <label
               for="execution-date"
@@ -284,38 +271,21 @@ let permalink = 'https://example.com/';
               <option>In consultation</option>
             </select>
           </div>
-
           <div class="pt-2">
             <label
-              for="message"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >Additional information</label
-            >
-            <textarea
-              name="additional-information-and-other"
-              required
-              rows="4"
-              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="Please leave as much information as possible"
-            ></textarea>
-          </div>
-
-          <div class="pt-2">
-            <label
-              for="message"
+              for="brief-outline-of-project"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >Brief outline of the project</label
             >
             <textarea
               name="brief-outline-of-project"
               required
-              required
               rows="8"
               class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Please leave as much information as possible"
             ></textarea>
           </div>
-
+          <div class="p-5"></div>
           <div class="pt-2">
             <label
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -335,13 +305,11 @@ let permalink = 'https://example.com/';
               Please compress/zip your inspiration files
             </div>
           </div>
-
+          <div class="p-5"></div>
           <div class="pt-2">
             <button
               class="mt-2 w-[8em] inline-flex justify-center content-center items-center px-3 py-2 text-sm font-medium text-center text-white bg-slate-700 rounded-lg hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              onclick="
-              onSubmit()
-              ">Submit</button
+              >Submit</button
             >
           </div>
         </form>
