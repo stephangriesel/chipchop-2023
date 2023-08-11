@@ -17,6 +17,8 @@ export default defineConfig({
           name: 'git-gateway',
           branch: 'latest',
         },
+        // Logo for backend
+        logo_url: `https://res.cloudinary.com/stephangriesel/image/upload/v1687318146/logo_cqhhz9.png`,
         // Configure where our media assets are stored & served from
         media_folder: 'public/upload',
         public_folder: '/upload',
