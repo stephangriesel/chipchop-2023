@@ -118,7 +118,6 @@ let permalink = 'https://example.com/';
                 name="other-type-of-furniture"
                 class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                 placeholder=""
-                required
               />
             </div>
           </div>
@@ -189,13 +188,13 @@ let permalink = 'https://example.com/';
               >
                 <div class="flex items-center pl-3">
                   <input
-                    name="in-consultation"
+                    name="special-features[]"
                     type="checkbox"
-                    value=""
+                    value="In Consultation"
                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                   />
                   <label
-                    for="in-consultation"
+                    for="special-features[]"
                     class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                     >In Consultation</label
                   >
@@ -206,13 +205,13 @@ let permalink = 'https://example.com/';
               >
                 <div class="flex items-center pl-3">
                   <input
-                    name="drawers"
+                    name="special-features[]"
                     type="checkbox"
-                    value=""
+                    value="Drawers"
                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                   />
                   <label
-                    for="drawers"
+                    for="special-features[]"
                     class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                     >Drawers</label
                   >
@@ -223,15 +222,32 @@ let permalink = 'https://example.com/';
               >
                 <div class="flex items-center pl-3">
                   <input
-                    name="rails"
+                    name="special-features[]"
                     type="checkbox"
-                    value=""
+                    value="Rails"
                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                   />
                   <label
-                    for="rails"
+                    for="special-features[]"
                     class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                     >Rails</label
+                  >
+                </div>
+              </li>
+              <li
+                class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+              >
+                <div class="flex items-center pl-3">
+                  <input
+                    name="special-features[]"
+                    type="checkbox"
+                    value="Other"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="other"
+                    class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >Other</label
                   >
                 </div>
               </li>
@@ -240,17 +256,31 @@ let permalink = 'https://example.com/';
           <div>
             <div class="pt-2">
               <label
-                for="additional-information-and-other"
+                for="other"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                >If other, please specify</label
+                >If other selected please specify</label
               >
               <input
                 type="text"
-                name="additional-information-and-other"
+                name="other-special-features"
                 class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                 placeholder=""
-                required
               />
+            </div>
+          </div>
+          <div>
+            <div class="pt-2">
+              <label
+                for="additional-information-and-other"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >Additional Information</label
+              >
+              <textarea
+                name="additional-information-and-other"
+                required
+                rows="8"
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Any additional information?"></textarea>
             </div>
           </div>
           <div class="p-5"></div>
