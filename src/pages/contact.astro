@@ -13,9 +13,9 @@ let permalink = 'https://example.com/';
 <html lang="en">
   <head>
     <Head {title} {description} {permalink} />
-    <script
+    <!-- <script
       src="https://www.google.com/recaptcha/api.js?render=6LeG2YQnAAAAACWVIdvIAg9JOy5k89hvUWctxzv3"
-    ></script>
+    ></script> -->
   </head>
 
   <body>
@@ -45,7 +45,6 @@ let permalink = 'https://example.com/';
           />
           <div class="pt-2">
             <label
-              for="email"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >Your email</label
             >
@@ -59,7 +58,6 @@ let permalink = 'https://example.com/';
           </div>
           <div class="pt-2">
             <label
-              for="name"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >Name</label
             >
@@ -73,7 +71,6 @@ let permalink = 'https://example.com/';
           </div>
           <div class="pt-2">
             <label
-              for="telephone"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >Telephone</label
             >
@@ -81,21 +78,19 @@ let permalink = 'https://example.com/';
               type="number"
               name="telephone"
               class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-              placeholder=""
               required
             />
           </div>
           <div class="p-5"></div>
           <div class="pt-2">
             <label
-              for="type-of-furniture"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >Type of furniture</label
             >
             <select
               name="type-of-furniture"
-              id="furniture"
               class="p-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              required
             >
               <option selected="true" disabled="disabled">Choose Option</option>
               <option>Wardrobe</option>
@@ -109,7 +104,6 @@ let permalink = 'https://example.com/';
           <div>
             <div class="pt-2">
               <label
-                for="other"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >If other selected please specify</label
               >
@@ -117,14 +111,12 @@ let permalink = 'https://example.com/';
                 type="text"
                 name="other-type-of-furniture"
                 class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                placeholder=""
               />
             </div>
           </div>
           <div>
             <div class="pt-2">
               <label
-                for="approximate-size"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >Approximate Size</label
               >
@@ -139,7 +131,6 @@ let permalink = 'https://example.com/';
           </div>
           <div class="pt-2">
             <label
-              for="materials"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >Material</label
             >
@@ -194,7 +185,6 @@ let permalink = 'https://example.com/';
                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                   />
                   <label
-                    for="special-features[]"
                     class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                     >In Consultation</label
                   >
@@ -211,7 +201,6 @@ let permalink = 'https://example.com/';
                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                   />
                   <label
-                    for="special-features[]"
                     class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                     >Drawers</label
                   >
@@ -228,7 +217,6 @@ let permalink = 'https://example.com/';
                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                   />
                   <label
-                    for="special-features[]"
                     class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                     >Rails</label
                   >
@@ -245,7 +233,6 @@ let permalink = 'https://example.com/';
                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                   />
                   <label
-                    for="other"
                     class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                     >Other</label
                   >
@@ -256,7 +243,6 @@ let permalink = 'https://example.com/';
           <div>
             <div class="pt-2">
               <label
-                for="other"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >If other selected please specify</label
               >
@@ -319,7 +305,7 @@ let permalink = 'https://example.com/';
           <div class="pt-2">
             <label
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              for="inspiration_file_upload">Inspiration files</label
+              >Inspiration files</label
             >
             <input
               class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
@@ -346,7 +332,7 @@ let permalink = 'https://example.com/';
       </div>
       <Footer />
     </div>
-    <script is:inline>
+    <!-- <script is:inline>
       function onSubmit(e) {
         e.preventDefault();
         grecaptcha.ready(function () {
@@ -357,6 +343,6 @@ let permalink = 'https://example.com/';
             .then(function (token) {});
         });
       }
-    </script>
+    </script> -->
   </body>
 </html>
