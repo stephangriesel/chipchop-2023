@@ -36,135 +36,103 @@ let permalink = 'https://example.com/';
           method="POST"
           enctype="multipart/form-data"
           class="flex flex-col"
-          id="form"
         >
           <input
             name="_redirect"
             type="hidden"
             value="https://grand-banoffee-8dcc7e.netlify.app/success/"
           />
-          <div class="pt-2">
-            <label
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >Your email</label
-            >
-            <input
-              type="email"
-              name="email"
-              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-              placeholder="user@domain.com"
-              required
-            />
-          </div>
-          <div class="pt-2">
-            <label
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >Name</label
-            >
-            <input
-              type="text"
-              name="name"
-              class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-              placeholder=""
-              required
-            />
-          </div>
-          <div class="pt-2">
-            <label
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >Telephone</label
-            >
-            <input
-              type="number"
-              name="telephone"
-              class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-              required
-            />
-          </div>
-          <div class="p-5"></div>
-          <div class="pt-2">
-            <label
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >Type of furniture</label
-            >
-            <select
-              name="type-of-furniture"
-              class="p-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              required
-            >
-              <option selected="true" disabled="disabled">Choose Option</option>
-              <option>Wardrobe</option>
-              <option>Kitchen</option>
-              <option>Cupboard</option>
-              <option>Table</option>
-              <option>Cabinet</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div>
-            <div class="pt-2">
-              <label
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                >If other selected please specify</label
-              >
-              <input
-                type="text"
-                name="other-furniture"
-                class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-              />
-            </div>
-          </div>
-          <div>
-            <div class="pt-2">
-              <label
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                >Approximate Size</label
-              >
-              <input
-                type="text"
-                name="approximate-size"
-                class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                placeholder="H x W x D"
-                required
-              />
-            </div>
-          </div>
-          <div class="pt-2">
-            <label
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >Material</label
-            >
-            <select
-              name="materials"
-              class="p-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              required
-            >
-              <option selected="true" disabled="disabled">Choose Option</option>
-              <option>In consultation</option>
-              <option>Multiplex</option>
-              <option>MDF</option>
-              <option>Real wood veneer</option>
-              <option>HPL</option>
-            </select>
-          </div>
-          <div class="pt-2">
-            <label
-              for="finish"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >Finish</label
-            >
-            <select
-              name="finish"
-              class="p-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              required
-            >
-              <option selected="true" disabled="disabled">Choose Option</option>
-              <option>In consultation</option>
-              <option>Painted</option>
-              <option>Varnished</option>
-              <option>Oiled/Waxed</option>
-            </select>
-          </div>
+
+          <label
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Your email</label
+          >
+          <input
+            name="email"
+            type="email"
+            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+          />
+          <label
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Name</label
+          >
+          <input
+            name="name"
+            type="text"
+            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+          />
+          <label
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Telephone</label
+          >
+          <input
+            name="telephone"
+            type="text"
+            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+          />
+          <label
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Type of furniture</label
+          >
+          <select
+            name="type-of-furniture"
+            class="p-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          >
+            <option selected="true" disabled="disabled">Choose Option</option>
+            <option>Wardrobe</option>
+            <option>Kitchen</option>
+            <option>Cupboard</option>
+            <option>Table</option>
+            <option>Cabinet</option>
+            <option>Other</option>
+          </select>
+          <label
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >If other selected please specify</label
+          >
+          <input
+            name="other-furniture"
+            type="text"
+            class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+          />
+          <label
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Approximate Size</label
+          >
+          <input
+            name="approximate-size"
+            type="text"
+            class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+          />
+          <label
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Material</label
+          >
+          <select
+            name="materials"
+            class="p-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          >
+            <option selected="true" disabled="disabled">Choose Option</option>
+            <option>In consultation</option>
+            <option>Multiplex</option>
+            <option>MDF</option>
+            <option>Real wood veneer</option>
+            <option>HPL</option>
+          </select>
+          <label
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Finish</label
+          >
+          <select
+            name="finish"
+            class="p-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          >
+            <option selected="true" disabled="disabled">Choose Option</option>
+            <option>In consultation</option>
+            <option>Painted</option>
+            <option>Varnished</option>
+            <option>Oiled/Waxed</option>
+          </select>
           <div class="pt-2">
             <h3
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -240,94 +208,65 @@ let permalink = 'https://example.com/';
               </li>
             </ul>
           </div>
-          <div>
-            <div class="pt-2">
-              <label
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                >If other selected please specify</label
-              >
-              <input
-                type="text"
-                name="other-special-features"
-                class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                placeholder=""
-              />
-            </div>
+          <label
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >If other selected please specify</label
+          >
+          <input
+            name="other-special-features"
+            type="text"
+            class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+          />
+          <label
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Additional Information</label
+          >
+          <textarea
+            name="additional-information-and-other"
+            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          ></textarea>
+          <label
+            for="execution-date"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Execution Date</label
+          >
+          <select
+            name="execution-date"
+            class="p-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          >
+            <option>Urgently</option>
+            <option>Within a couple of months</option>
+            <option>In consultation</option>
+          </select>
+          <label
+            for="brief-outline-of-project"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Brief outline of the project</label
+          >
+          <textarea
+            name="brief-outline-of-project"
+            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          ></textarea>
+          <label
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Inspiration files</label
+          >
+          <input
+            name="inspiration-pictures-and-files"
+            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+            type="file"
+          />
+          <div
+            class="mt-1 text-sm text-gray-500 dark:text-gray-300"
+            id="inspiration_file_upload"
+          >
+            Please compress/zip your inspiration files
           </div>
-          <div>
-            <div class="pt-2">
-              <label
-                for="additional-information-and-other"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                >Additional Information</label
-              >
-              <textarea
-                name="additional-information-and-other"
-                required
-                rows="8"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Any additional information?"></textarea>
-            </div>
-          </div>
-          <div class="p-5"></div>
-          <div class="pt-2">
-            <label
-              for="execution-date"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >Execution Date</label
-            >
-            <select
-              name="execution-date"
-              required
-              class="p-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            >
-              <option selected="true" disabled="disabled">Choose Option</option>
-              <option>Urgently</option>
-              <option>Within a couple of months</option>
-              <option>In consultation</option>
-            </select>
-          </div>
-          <div class="pt-2">
-            <label
-              for="brief-outline-of-project"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >Brief outline of the project</label
-            >
-            <textarea
-              name="brief-outline-of-project"
-              required
-              rows="8"
-              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="Please leave as much information as possible"
-            ></textarea>
-          </div>
-          <div class="p-5"></div>
-          <div class="pt-2">
-            <label
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >Inspiration files</label
-            >
-            <input
-              class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-              aria-describedby="inspiration_file_upload"
-              name="inspiration-pictures-and-files"
-              type="file"
-              required
-            />
-            <div
-              class="mt-1 text-sm text-gray-500 dark:text-gray-300"
-              id="inspiration_file_upload"
-            >
-              Please compress/zip your inspiration files
-            </div>
-          </div>
-          <div class="p-5"></div>
-          <div class="pt-2">
-            <button
-              class="mt-2 w-[8em] inline-flex justify-center content-center items-center px-3 py-2 text-sm font-medium text-center text-white bg-slate-700 rounded-lg hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >Submit</button
-            >
-          </div>
+
+          <button
+            class="mt-2 w-[8em] inline-flex justify-center content-center items-center px-3 py-2 text-sm font-medium text-center text-white bg-slate-700 rounded-lg hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >Submit</button
+          >
         </form>
       </div>
       <Footer />
