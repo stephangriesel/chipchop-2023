@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 export interface Props {
   title: string;
   description: string;
@@ -11,6 +12,9 @@ const { title, description, permalink } = Astro.props;
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+<!-- Transitions TODO: Review sub pages disabling, refer to about pages -->
+<!-- <ViewTransitions fallback="animate" /> -->
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
