@@ -16,6 +16,12 @@ const { title, description, permalink } = Astro.props;
 <!-- Transitions TODO: Review sub pages disabling, refer to about pages -->
 <!-- <ViewTransitions fallback="animate" /> -->
 
+<!-- Flowbite -->
+<script
+  is:inline
+  src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"
+></script>
+
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title} />
@@ -47,9 +53,3 @@ const { title, description, permalink } = Astro.props;
   rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap"
 />
-
-<!-- Flowbite -->
-<script
-  is:inline
-  src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"
-></script>
