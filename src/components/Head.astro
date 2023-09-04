@@ -13,14 +13,17 @@ const { title, description, permalink } = Astro.props;
 <meta name="viewport" content="width=device-width" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-<!-- Transitions TODO: Review sub pages disabling, refer to about pages -->
-<!-- <ViewTransitions fallback="animate" /> -->
+<!-- Transitions  -->
+<ViewTransitions fallback="animate" />
 
 <!-- Flowbite -->
-<script
-  is:inline
-  src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"
-></script>
+<script>
+  import { initFlowbite } from 'flowbite';
+
+  document.addEventListener('astro:page-load', () => {
+    initFlowbite();
+  });
+</script>
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
