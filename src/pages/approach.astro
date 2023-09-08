@@ -42,7 +42,12 @@ let permalink = 'https://example.com/';
     </div>
     <section class="w-full h-screen">
       <img
-        src="https://res.cloudinary.com/chipchop/image/upload/w_1200,c_scale/e_sharpen/v1693889045/static/about/approach1.jpg"
+        srcset="
+          https://res.cloudinary.com/chipchop/image/upload/w_512,c_scale/v1693889045/static/about/approach1.jpg 512w,
+          https://res.cloudinary.com/chipchop/image/upload/w_1024,c_scale/v1693889045/static/about/approach1.jpg 1024w
+          "
+        sizes="(max-width: 600px) 480px,800px"
+        src="https://res.cloudinary.com/chipchop/image/upload/w_1024,c_scale/v1693889045/static/about/approach1.jpg"
         class="object-cover w-full h-full"
         alt="Wood Work"
       />
