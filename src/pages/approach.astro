@@ -14,10 +14,9 @@ let permalink = 'https://example.com/';
 <html lang="en">
   <head>
     <Head {title} {description} {permalink} />
-    <ViewTransitions fallback="animate" />
   </head>
 
-  <body>
+  <body transition:animate={fade({ duration: '0.4s'>
     <div class="ml-[auto] mr-[auto] w-full max-w-[65em] pl-[2rem] pr-[2rem]">
       <Nav />
     </div>
