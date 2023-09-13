@@ -35,6 +35,25 @@ const { title, description, tag } = Astro.props as Props;
             container: '#my-gallery',
             cloudName: 'chipchop',
             mediaAssets: [{ tag: tag, mediaType: 'image' }],
+            carouselLocation: 'bottom',
+            aspectRatio: '4:3',
+            themeProps: {
+              primary: '#FFFFFF',
+              onPrimary: '#929292',
+              active: '#000000',
+            },
+            thumbnailProps: {
+              width: 120,
+              height: 80,
+              spacing: 1,
+              navigationColor: 'green',
+            },
+            viewportBreakpoints: [
+              {
+                breakpoint: 600,
+                carouselStyle: 'indicators',
+              },
+            ],
           });
           window.myGallery.render();
         } else {
