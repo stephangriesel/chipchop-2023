@@ -14,7 +14,6 @@ let permalink = 'https://example.com/';
 <html lang="en">
   <head>
     <Head {title} {description} {permalink} />
-    <ViewTransitions fallback="animate" />
   </head>
 
   <body>
@@ -24,10 +23,7 @@ let permalink = 'https://example.com/';
     <div class="ml-[auto] mr-[auto] w-full max-w-[65em] pl-[2rem] pr-[2rem]">
       <main>
         <section class="bg-white dark:bg-gray-900">
-          <div
-            class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16"
-            transition:animate="slide"
-          >
+          <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
             <h1
               class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white font-pathway-gothic-one"
             >
