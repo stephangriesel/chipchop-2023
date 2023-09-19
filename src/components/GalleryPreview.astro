@@ -7,13 +7,13 @@ const { post } = Astro.props;
 ---
 
 <div
-  class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-2 text-center"
+  class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-2 text-center animation-fade-in"
 >
-  <a href="#">
+  <a href={post.url}>
     <img class="rounded-t-lg" src={post.frontmatter.thumbnail} alt="" />
   </a>
   <div class="p-5">
-    <a href="#">
+    <a href={post.url}>
       <h5
         class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
       >
@@ -45,3 +45,13 @@ const { post } = Astro.props;
     </a>
   </div>
 </div>
+
+<style>
+  p,
+  div,
+  h3,
+  h1 {
+    animation-timeline: view();
+    animation-range: entry 20% cover 20%;
+  }
+</style>
