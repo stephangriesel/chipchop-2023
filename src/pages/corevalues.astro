@@ -59,13 +59,13 @@ let permalink = 'https://chipchop.nl/';
                 </div>
                 <div class="flex justify-center">
                   <div
-                    class="flex items-center content-center align-center text-gray-500 dark:text-gray-400 font-bold text-2xl justify-center w-72 h-14 bg-[#ebccca] rounded-md mb-5 mt-5 mb-5 mt-5"
+                    class="flex items-center content-center align-center text-gray-500 dark:text-gray-400 font-bold text-2xl justify-center w-72 h-14 bg-[#ebccca] rounded-md mb-5 mt-5 animate-fade-in"
                   >
                     HIGH QUALITY
                   </div>
                 </div>
                 <p
-                  class="mb-4 text-base font-normal text-xl text-gray-500 dark:text-gray-400"
+                  class="mb-4 text-base font-normal text-xl text-gray-500 dark:text-gray-400 animate-fade-in"
                 >
                   Everything we make, is built to last, even with intensive
                   daily use.
@@ -78,13 +78,13 @@ let permalink = 'https://chipchop.nl/';
                 </div>
                 <div class="flex justify-center">
                   <div
-                    class="flex items-center content-center align-center text-gray-500 dark:text-gray-400 font-bold text-2xl justify-center w-72 h-14 bg-[#ebccca] rounded-md mb-5 mt-5 mb-5 mt-5"
+                    class="flex items-center content-center align-center text-gray-500 dark:text-gray-400 font-bold text-2xl justify-center w-72 h-14 bg-[#ebccca] rounded-md mb-5 mt-5 animate-fade-in"
                   >
                     GOOD DESIGN
                   </div>
                 </div>
                 <p
-                  class="mb-4 text-base font-normal text-xl text-gray-500 dark:text-gray-400"
+                  class="mb-4 text-base font-normal text-xl text-gray-500 dark:text-gray-400 animate-fade-in"
                 >
                   Our designs are always pleasing to look at, easy to get and
                   intuitive to use.
@@ -97,13 +97,13 @@ let permalink = 'https://chipchop.nl/';
                 </div>
                 <div class="flex justify-center">
                   <div
-                    class="flex items-center content-center align-center text-gray-500 dark:text-gray-400 font-bold text-2xl justify-center w-72 h-14 bg-[#ebccca] rounded-md mb-5 mt-5 mb-5 mt-5"
+                    class="flex items-center content-center align-center text-gray-500 dark:text-gray-400 font-bold text-2xl justify-center w-72 h-14 bg-[#ebccca] rounded-md mb-5 mt-5 animate-fade-in"
                   >
                     CUSTOMER SERVICE
                   </div>
                 </div>
                 <p
-                  class="mb-4 text-base font-normal text-xl text-gray-500 dark:text-gray-400"
+                  class="mb-4 text-base font-normal text-xl text-gray-500 dark:text-gray-400 animate-fade-in"
                 >
                   We are on a journey to make customers happy with custom-made
                   happiness.
@@ -116,13 +116,13 @@ let permalink = 'https://chipchop.nl/';
                 </div>
                 <div class="flex justify-center">
                   <div
-                    class="flex items-center content-center align-center text-gray-500 dark:text-gray-400 font-bold text-2xl justify-center w-72 h-14 bg-[#ebccca] rounded-md mb-5 mt-5 mb-5 mt-5"
+                    class="flex items-center content-center align-center text-gray-500 dark:text-gray-400 font-bold text-2xl justify-center w-72 h-14 bg-[#ebccca] rounded-md mb-5 mt-5 animate-fade-in"
                   >
                     BIG FUN
                   </div>
                 </div>
                 <p
-                  class="mb-4 text-base font-normal text-xl text-gray-500 dark:text-gray-400"
+                  class="mb-4 text-base font-normal text-xl text-gray-500 dark:text-gray-400 animate-fade-in"
                 >
                   When crafting our products, we put the 'fun' back into
                   'functionality'.
@@ -135,13 +135,13 @@ let permalink = 'https://chipchop.nl/';
                 </div>
                 <div class="flex justify-center">
                   <div
-                    class="flex items-center content-center align-center text-gray-500 dark:text-gray-400 font-bold text-2xl justify-center w-72 h-14 bg-[#ebccca] rounded-md mb-5 mt-5 mb-5 mt-5"
+                    class="flex items-center content-center align-center text-gray-500 dark:text-gray-400 font-bold text-2xl justify-center w-72 h-14 bg-[#ebccca] rounded-md mb-5 mt-5 animate-fade-in"
                   >
                     EPIC SUSTAINABILITY
                   </div>
                 </div>
                 <p
-                  class="mb-4 text-base font-normal text-xl text-gray-500 dark:text-gray-400"
+                  class="mb-4 text-base font-normal text-xl text-gray-500 dark:text-gray-400 animate-fade-in"
                 >
                   Our materials are ethically sourced and our output is epically
                   durable
@@ -197,5 +197,13 @@ let permalink = 'https://chipchop.nl/';
       </a>
     </div>
     <Footer />
+    <style>
+      p,
+      div,
+      h3 {
+        animation-timeline: view();
+        animation-range: entry 30% cover 30%;
+      }
+    </style>
   </body>
 </html>

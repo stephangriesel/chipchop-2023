@@ -32,12 +32,12 @@ let permalink = 'https://chipchop.nl/';
         <section class="bg-white dark:bg-gray-900">
           <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
             <h1
-              class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white font-pathway-gothic-one"
+              class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white font-pathway-gothic-one animate-fade-in"
             >
               OUR STORY
             </h1>
             <p
-              class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400"
+              class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400 animate-fade-in"
             >
               Chipchop Amsterdam was founded in 2015 by Ma­rc Lineham. Yet it
               was way earlier that the self-taught hobbyist started gaining
@@ -48,7 +48,7 @@ let permalink = 'https://chipchop.nl/';
               more.
             </p>
             <div
-              class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4"
+              class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 animate-fade-in"
             >
               <a
                 href="/why"
@@ -95,5 +95,14 @@ let permalink = 'https://chipchop.nl/';
       />
     </section>
     <Footer />
+    <style>
+      p,
+      div,
+      h3,
+      h1 {
+        animation-timeline: view();
+        animation-range: entry 20% cover 20%;
+      }
+    </style>
   </body>
 </html>
