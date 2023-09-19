@@ -10,7 +10,16 @@ module.exports = {
 			},
       width: {
         '128': '32rem',
-      }
+      },
+			keyframes: {
+				fade: {
+					'0%': { opacity: 0 },
+					'100%': { opacity: 1 },
+				},
+			},
+			animation: {
+				'fade-in': 'fade 2s linear',
+			},
     },
 	},
 	plugins: [
