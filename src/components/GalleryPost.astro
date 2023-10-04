@@ -18,8 +18,11 @@ const { title, description, tag } = Astro.props as Props;
   <div
     class="text-center ml-[auto] mr-[auto] w-full max-w-[65em] pl-[2rem] pr-[2rem]"
   >
-    <h1>{title}</h1>
-    <p class="text-center">{description}</p>
+    <h1
+      class="text-3xl uppercase font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white font-pathway-gothic-one m-5 text-center"
+    >
+      {title} : {description}
+    </h1>
   </div>
   <div class="ml-[auto] mr-[auto] w-full max-w-[65em] pl-[2rem] pr-[2rem]">
     <script
