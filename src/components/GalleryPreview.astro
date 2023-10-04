@@ -10,7 +10,11 @@ const { post } = Astro.props;
   class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-2 text-center animation-fade-in"
 >
   <a href={post.url}>
-    <img class="rounded-t-lg" src={post.frontmatter.thumbnail} alt="" />
+    <img
+      class="rounded-t-lg w-full h-80"
+      src={post.frontmatter.thumbnail}
+      alt=""
+    />
   </a>
   <div class="p-5">
     <a href={post.url}>
