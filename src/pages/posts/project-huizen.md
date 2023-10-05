@@ -1,6 +1,6 @@
 ---
 title: Project Huizen
-thumbnail: /upload/dscf8842.jpg
+thumbnail: /upload/panw-insta1.jpg
 description: Luxury vintage-style sideboard
 tag: huizen
 layout: ../../layouts/GalleryPost.astro
