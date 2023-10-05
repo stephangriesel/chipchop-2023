@@ -23,12 +23,12 @@ let permalink = 'https://chipchop.nl/';
         <section class="bg-white dark:bg-gray-900">
           <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
             <h1
-              class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white font-pathway-gothic-one"
+              class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white font-pathway-gothic-one animation"
             >
               WHY CHIPCHOP
             </h1>
             <p
-              class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400"
+              class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400 animation"
             >
               Furniture is a funny subject. Many people believe that filling
               their home with white cubes will make it seem larger and more
@@ -37,7 +37,7 @@ let permalink = 'https://chipchop.nl/';
               creative.
             </p>
             <p
-              class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400"
+              class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400 animation"
             >
               Now let’s look beyond the products and consider the process.
               Decorating your interior should be fun, right? While the IKEAs of
@@ -51,14 +51,14 @@ let permalink = 'https://chipchop.nl/';
     <section class="w-full h-screen">
       <img
         src="https://res.cloudinary.com/chipchop/image/upload/w_1200,c_scale/v1693889067/static/about/why1.jpg"
-        class="object-cover w-full h-full"
+        class="object-cover w-full h-full animation"
         alt="Wood Work"
       />
     </section>
     <section class="bg-white dark:bg-gray-900">
       <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
         <p
-          class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400 animate-fade-in"
+          class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400 animation"
         >
           Chipchop is not for the cheap. Chipchop is for those who want to have
           some fun while designing their interior. For those who want
@@ -67,7 +67,7 @@ let permalink = 'https://chipchop.nl/';
           what they want.
         </p>
         <p
-          class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400 animate-fade-in"
+          class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400 animation"
         >
           We can provide you with design insights, inspiring ideas and project
           visualisations, all based on your own space and personal taste. We
@@ -80,7 +80,7 @@ let permalink = 'https://chipchop.nl/';
     <section class="w-full h-screen">
       <img
         src="https://res.cloudinary.com/chipchop/image/upload/w_1200,c_scale/v1693889075/static/about/why2.jpg"
-        class="object-cover w-full h-full"
+        class="object-cover w-full h-full animation"
         alt="Wood Work"
       />
     </section>
@@ -89,7 +89,7 @@ let permalink = 'https://chipchop.nl/';
         <section class="bg-white dark:bg-gray-900">
           <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
             <p
-              class="text-xl font-normal text-gray-500 lg:text-2xl sm:px-16 lg:px-48 dark:text-gray-400 animate-fade-in"
+              class="text-xl font-normal text-gray-500 lg:text-2xl sm:px-16 lg:px-48 dark:text-gray-400 animation"
             >
               The only thing you have to make, is an appointment.
             </p>
@@ -98,7 +98,7 @@ let permalink = 'https://chipchop.nl/';
       </main>
     </div>
     <div
-      class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4"
+      class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 animation"
     >
       <a
         href="/contact"
@@ -123,12 +123,38 @@ let permalink = 'https://chipchop.nl/';
     </div>
     <Footer />
     <style>
-      p,
-      div,
-      h3 {
-        animation-timeline: view();
-        animation-range: entry 30% cover 20%;
+      .animation {
+        opacity: 0;
+        transition: all 0.7s ease-out;
+        transition-delay: 0.4s;
+      }
+
+      .scroll-animation {
+        opacity: 1;
+        transform: translateX(0);
       }
     </style>
+    <script>
+      const the_animation = document.querySelectorAll('.animation');
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('scroll-animation');
+            } else {
+              entry.target.classList.remove('scroll-animation');
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+      //
+      for (let i = 0; i < the_animation.length; i++) {
+        const elements = the_animation[i];
+
+        observer.observe(elements);
+      }
+    </script>
   </body>
 </html>
