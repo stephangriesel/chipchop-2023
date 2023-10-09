@@ -1,8 +1,8 @@
 ---
 title: Project Erik
 thumbnail: /upload/project-erik-copy.jpg
-description: Very nice project for Erik
+description: Oak Kitchen Island
 tag: erik
 layout: ../../layouts/GalleryPost.astro
 ---
-Another very nice project for Erik
+A nice refurbishment of an old kitchen
