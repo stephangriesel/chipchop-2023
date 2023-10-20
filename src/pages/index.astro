@@ -1,7 +1,7 @@
 ---
 // Component Imports
 import Head from '../components/Head.astro';
-import { ViewTransitions } from 'astro:transitions';
+// import { ViewTransitions } from 'astro:transitions';
 
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
@@ -14,7 +14,7 @@ let permalink = 'https://chipchop.nl/';
 <html lang="en">
   <head>
     <Head {title} {description} {permalink} />
-    <ViewTransitions fallback="animate" />
+    <!-- <ViewTransitions fallback="animate" /> -->
   </head>
   <body>
     <div class="ml-[auto] mr-[auto] w-full max-w-[65em] pl-[2rem] pr-[2rem]">
