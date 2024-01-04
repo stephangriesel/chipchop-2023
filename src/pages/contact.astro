@@ -1,14 +1,14 @@
 ---
-import Head from '../components/Head.astro';
-import { ViewTransitions } from 'astro:transitions';
+import Head from "../components/Head.astro";
+import { ViewTransitions } from "astro:transitions";
 
-import Nav from '../components/Nav.astro';
-import Footer from '../components/Footer.astro';
-import { SITE } from '../config';
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import { SITE } from "../config";
 
 let { title } = SITE;
-let description = 'Custom-made designs made simple';
-let permalink = 'https://chipchop.nl/';
+let description = "Custom-made designs made simple";
+let permalink = "https://chipchop.nl/";
 ---
 
 <html lang="en">
@@ -39,7 +39,7 @@ let permalink = 'https://chipchop.nl/';
           <input
             name="_redirect"
             type="hidden"
-            value="https://grand-banoffee-8dcc7e.netlify.app/success/"
+            value="https://chipchop.nl/success/"
           />
 
           <label
@@ -286,15 +286,15 @@ let permalink = 'https://chipchop.nl/';
       }
     </style>
     <script>
-      const the_animation = document.querySelectorAll('.animation');
+      const the_animation = document.querySelectorAll(".animation");
 
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              entry.target.classList.add('scroll-animation');
+              entry.target.classList.add("scroll-animation");
             } else {
-              entry.target.classList.remove('scroll-animation');
+              entry.target.classList.remove("scroll-animation");
             }
           });
         },
