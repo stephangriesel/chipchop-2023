@@ -1,6 +1,5 @@
 ---
 import Head from "../components/Head.astro";
-import { ViewTransitions } from "astro:transitions";
 
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
@@ -14,7 +13,6 @@ let permalink = "https://chipchop.nl/";
 <html lang="en">
   <head>
     <Head {title} {description} {permalink} />
-    <ViewTransitions />
   </head>
 
   <body>
@@ -31,21 +29,14 @@ let permalink = "https://chipchop.nl/";
       </div>
       <div class="ml-[auto] mr-[auto] w-full max-w-[65em] pl-[2rem] pr-[2rem]">
         <form
-          action="https://formie.io/form/92f0a5e8-6eac-4adf-bb83-bacd4df0fd24"
+          action="https://form.taxi/s/7t3wbnfc"
           method="POST"
           enctype="multipart/form-data"
+          accept-charset="UTF-8"
           class="flex flex-col"
         >
-          <input
-            name="_redirect"
-            type="hidden"
-            value="https://chipchop.nl/success"
-          />
-          <input
-            name="_redirect_error"
-            type="hidden"
-            value="https://chipchop.nl/error"
-          />
+          <input type="text" name="_gotcha" value="" style="display:none;" />
+          <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
           <label
             class="block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300"
             >Your email</label
@@ -257,11 +248,7 @@ let permalink = "https://chipchop.nl/";
             class="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
             >Inspiration files</label
           >
-          <input
-            name="inspiration-pictures-and-files"
-            class="mb-4block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-            type="file"
-          />
+          <input type="file" name="Your picture" accept="image/*" />
           <div
             class="mt-1 text-sm text-gray-500 dark:text-gray-300"
             id="inspiration_file_upload"
@@ -269,10 +256,11 @@ let permalink = "https://chipchop.nl/";
             Please compress/zip your inspiration files
           </div>
 
-          <button
+          <input
             class="mt-10 w-[8em] inline-flex justify-center content-center items-center px-3 py-2 text-sm font-medium text-center text-white bg-slate-700 rounded-lg hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >Submit</button
-          >
+            type="submit"
+            value="Send"
+          />
         </form>
       </div>
       <Footer />
