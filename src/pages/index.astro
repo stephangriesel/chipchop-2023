@@ -1,14 +1,14 @@
 ---
 // Component Imports
-import Head from '../components/Head.astro';
+import Head from "../components/Head.astro";
 // import { ViewTransitions } from 'astro:transitions';
 
-import Nav from '../components/Nav.astro';
-import Footer from '../components/Footer.astro';
-import { SITE } from '../config';
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import { SITE } from "../config";
 let { title } = SITE;
-let description = 'Custom-made designs made simple';
-let permalink = 'https://chipchop.nl/';
+let description = "Custom-made designs made simple";
+let permalink = "https://chipchop.nl/";
 ---
 
 <html lang="en">
@@ -108,24 +108,31 @@ let permalink = 'https://chipchop.nl/';
       }
     </style>
     <script>
-      const the_animation = document.querySelectorAll('.animation');
+      const the_animation = document.querySelectorAll(".animation");
 
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              entry.target.classList.add('scroll-animation');
-            } else {
-              entry.target.classList.remove('scroll-animation');
+              // Check for "seen" class and element visibility
+              if (
+                !entry.target.classList.contains("seen") &&
+                entry.target.offsetParent !== null
+              ) {
+                entry.target.classList.add("scroll-animation");
+                entry.target.classList.add("seen");
+
+                // Unobserve element after animation (optional)
+                observer.unobserve(entry.target);
+              }
             }
           });
         },
-        { threshold: 0.5 }
+        { threshold: 0.1 }
       );
-      //
+
       for (let i = 0; i < the_animation.length; i++) {
         const elements = the_animation[i];
-
         observer.observe(elements);
       }
     </script>
