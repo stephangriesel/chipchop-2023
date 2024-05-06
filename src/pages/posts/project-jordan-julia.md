@@ -1,7 +1,7 @@
 ---
 title: Project Jordan & Julia
-thumbnail: /upload/project-julia-jordan-2-copy.jpg
-description: Bespoke, wardrobe, cupboard, sliding door and shelf
+thumbnail: /upload/julia-and-jordan.jpeg
+description: Bespoke wardrobe, cupboard, sliding door and shelf
 tag: jordan
 layout: ../../layouts/GalleryPost.astro
 ---
