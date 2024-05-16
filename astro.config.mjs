@@ -37,7 +37,7 @@ export default defineConfig({
                 name: "starredTag",
                 widget: "boolean",
                 label: "Starred Project",
-                hint: "Enabling this will add this photo to top. Minimum 3 photos required.",
+                hint: "Enabling this will add photo to top. Minimum 3 photos required.",
                 default: "false",
               },
               {
