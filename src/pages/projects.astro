@@ -1,17 +1,18 @@
 ---
-import Head from '../components/Head.astro';
+import Head from "../components/Head.astro";
 
-import Nav from '../components/Nav.astro';
-import Footer from '../components/Footer.astro';
-import { SITE } from '../config';
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import { SITE } from "../config";
 
-import GalleryPreview from '../components/GalleryPreview.astro';
+import GalleryPreview from "../components/GalleryPreview.astro";
+// import GalleryFavorite from "../components/GalleryFavorite.astro";
 
 let { title } = SITE;
-let description = 'Custom-made designs made simple';
-let permalink = 'https://chipchop.nl/';
+let description = "Custom-made designs made simple";
+let permalink = "https://chipchop.nl/";
 
-let allPosts = await Astro.glob('./posts/*.md');
+let allPosts = await Astro.glob("./posts/*.md");
 allPosts = allPosts.sort(
   (a, b) =>
     new Date(b.frontmatter.publishDate).valueOf() -
@@ -36,6 +37,19 @@ allPosts = allPosts.sort(
           </h1>
         </div>
       </div>
+      <!-- <h5
+        class="mb-4 text-5xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-5xl dark:text-white font-pathway-gothic-one mt-5"
+      >
+        STARRED PROJECTS
+      </h5>
+      <section class="grid grid-cols-1 md:grid-cols-3">
+        {allPosts.map((p) => <GalleryFavorite post={p} />)}
+      </section>
+      <h1
+        class="mb-4 text-5xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-5xl dark:text-white font-pathway-gothic-one mt-5"
+      >
+        MORE PROJECTS
+      </h1> -->
       <section class="grid grid-cols-1 md:grid-cols-3">
         {allPosts.map((p) => <GalleryPreview post={p} />)}
       </section>
