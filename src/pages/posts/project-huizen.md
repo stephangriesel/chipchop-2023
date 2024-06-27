@@ -1,5 +1,6 @@
 ---
 title: Project Huizen
+starredTag: true
 thumbnail: /upload/panw-insta1.jpg
 description: Luxury vintage-style sideboard
 tag: huizen
