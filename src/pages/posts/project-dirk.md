@@ -1,6 +1,6 @@
 ---
 title: Project Dirk
-starredTag: "false"
+starredTag: true
 thumbnail: /upload/project-dirk-3-copy.jpg
 description: Built in window seat with storage
 tag: dirk
