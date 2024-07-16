@@ -1,5 +1,6 @@
 ---
 title: Project Nina & Hanno
+starredTag: true
 thumbnail: /upload/project-nina1.jpg
 description: Built in bed wardrobe
 tag: nina
