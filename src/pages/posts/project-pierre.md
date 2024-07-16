@@ -1,6 +1,6 @@
 ---
 title: Project Pierre
-starredTag: "false"
+starredTag: true
 thumbnail: /upload/project-pierre-1-copy.jpg
 description: Custom-built archway wardrobe with integrated lighting, shelf and
   radiator cover
