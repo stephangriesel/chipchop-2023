@@ -4,13 +4,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  theme: {
-    extend: {
-      aria: {
-        current: "current=page",
-      },
-    },
-  },
   integrations: [
     tailwind({
       config: {
