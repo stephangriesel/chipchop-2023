@@ -37,7 +37,7 @@ const { title, description, tag } = Astro.props as Props;
           window.myGallery = cloudinary.galleryWidget({
             container: '#my-gallery',
             cloudName: 'chipchop',
-            zoom: false,
+            zoom: true,
             fullscreen: true,
             mediaAssets: [{ tag: tag, mediaType: 'image' }],
             carouselLocation: 'left',
