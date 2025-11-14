@@ -29,7 +29,7 @@ const { title, description, tag } = Astro.props as Props;
       src="https://product-gallery.cloudinary.com/all.js"
       type="text/javascript"
       is:inline></script>
-    <div id="my-gallery" style="max-width:80%;margin:auto"></div>
+    <div id="my-gallery"></div>
 
     <script define:vars={{ tag }} type="text/javascript">
       (function init() {
@@ -37,9 +37,10 @@ const { title, description, tag } = Astro.props as Props;
           window.myGallery = cloudinary.galleryWidget({
             container: '#my-gallery',
             cloudName: 'chipchop',
+            zoom: false,
+            fullscreen: true,
             mediaAssets: [{ tag: tag, mediaType: 'image' }],
-            carouselLocation: 'bottom',
-            aspectRatio: '4:3',
+            carouselLocation: 'left',
             themeProps: {
               primary: '#FFFFFF',
               onPrimary: '#929292',
@@ -97,4 +98,13 @@ const { title, description, tag } = Astro.props as Props;
     </a>
   </div>
   <Footer />
+  <style>
+  #my-gallery {
+    width: 100vw; 
+    max-width: 100vw; 
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+</style>
 </div>
