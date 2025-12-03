@@ -84,6 +84,28 @@ const { title, description, tag } = Astro.props as Props;
           const galleryEl = document.getElementById("my-gallery");
           if (galleryEl) {
             galleryEl.appendChild(toggleBtn);
+
+            // Inject exit fullscreen button
+            const exitBtn = document.createElement("button");
+            exitBtn.id = "gallery-exit-btn";
+            exitBtn.title = "Exit Fullscreen";
+            exitBtn.innerHTML = `
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            `;
+            exitBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              if (document.exitFullscreen) {
+                document.exitFullscreen();
+              } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+              } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+              }
+            });
+            galleryEl.appendChild(exitBtn);
           }
 
           // --- ADD THIS NEW CODE ---
@@ -186,13 +208,13 @@ const { title, description, tag } = Astro.props as Props;
     }
 
     /* Toggle Button Styles */
-    #gallery-toggle-btn {
+    :global(#gallery-toggle-btn) {
       display: none;
-      position: absolute;
+      position: fixed;
       bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 10000;
+      z-index: 2147483647;
       background: rgba(0, 0, 0, 0.5);
       color: white;
       border: 2px solid rgba(255, 255, 255, 0.7);
@@ -203,7 +225,7 @@ const { title, description, tag } = Astro.props as Props;
       transition: background 0.3s;
     }
 
-    #gallery-toggle-btn:hover {
+    :global(#gallery-toggle-btn:hover) {
       background: rgba(0, 0, 0, 0.8);
     }
 
@@ -220,10 +242,33 @@ const { title, description, tag } = Astro.props as Props;
     }
 
     /* Show button in fullscreen */
-    :global(#my-gallery:fullscreen) #gallery-toggle-btn,
-    :global(#my-gallery:-webkit-full-screen) #gallery-toggle-btn,
-    :global(#my-gallery:-ms-fullscreen) #gallery-toggle-btn {
+    :global(#my-gallery:fullscreen) :global(#gallery-toggle-btn),
+    :global(#my-gallery:-webkit-full-screen) :global(#gallery-toggle-btn),
+    :global(#my-gallery:-ms-fullscreen) :global(#gallery-toggle-btn),
+    :global(#my-gallery:fullscreen) :global(#gallery-exit-btn),
+    :global(#my-gallery:-webkit-full-screen) :global(#gallery-exit-btn),
+    :global(#my-gallery:-ms-fullscreen) :global(#gallery-exit-btn) {
       display: block;
+    }
+
+    /* Exit Button Styles */
+    :global(#gallery-exit-btn) {
+      display: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 2147483647;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+      padding: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    :global(#gallery-exit-btn:hover) {
+      background: rgba(0, 0, 0, 0.8);
     }
 
     /* Hide thumbnails in fullscreen (default, unless .show-thumbs is present) */
