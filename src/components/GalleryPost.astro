@@ -38,7 +38,7 @@ const { title, description, tag } = Astro.props as Props;
             container: "#my-gallery",
             cloudName: "chipchop",
             mediaAssets: [{ tag: tag, mediaType: "image" }],
-            zoom: false,
+            zoom: true,
             fullscreen: true,
             carouselLocation: "left", // This is your change from 'bottom'
             themeProps: {
