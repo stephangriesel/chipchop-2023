@@ -70,7 +70,10 @@ const { title, description, tag } = Astro.props as Props;
           toggleBtn.title = "Toggle Thumbnails";
           toggleBtn.innerHTML = `
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="18 15 12 9 6 15"></polyline>
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
             </svg>
           `;
           toggleBtn.addEventListener("click", (e) => {
@@ -211,9 +214,8 @@ const { title, description, tag } = Astro.props as Props;
     :global(#gallery-toggle-btn) {
       display: none;
       position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
+      top: 20px;
+      left: 20px;
       z-index: 2147483647;
       background: rgba(0, 0, 0, 0.5);
       color: white;
@@ -247,6 +249,7 @@ const { title, description, tag } = Astro.props as Props;
     :global(#my-gallery:-ms-fullscreen) :global(#gallery-toggle-btn),
     :global(#my-gallery:fullscreen) :global(#gallery-exit-btn),
     :global(#my-gallery:-webkit-full-screen) :global(#gallery-exit-btn),
+    :global(#my-gallery:-ms-fullscreen) :global(#gallery-exit-btn),
     :global(#my-gallery:-ms-fullscreen) :global(#gallery-exit-btn) {
       display: block;
     }
