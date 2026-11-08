@@ -5,4 +5,4 @@ description: Bespoke Tv unit, niche storage and large wardrobe with oak veneer d
 tag: bas
 layout: ../../layouts/GalleryPost.astro
 ---
-made from white hpl, oak veneer and solid oak
+made from white hpl, oak veneer and solid oak.
