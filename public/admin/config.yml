@@ -24,7 +24,7 @@ auth:
   last_name_claim: last_name
   avatar_url_claim: avatar_url
 
-logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+logo_url: https://res.cloudinary.com/stephangriesel/image/upload/v1687318146/logo_cqhhz9.png
 site_url: https://chipchop.nl
 
 media_folder: public/upload
